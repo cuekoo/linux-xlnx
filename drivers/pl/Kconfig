@@ -1,0 +1,17 @@
+menuconfig PL
+	bool "Programmable Logic Support"
+	depends on HAS_IOMEM && OF
+	help
+		Avnet Programmable Logic Support
+
+if PL
+
+config PL_DEBUG
+	bool "Enable Debug Message"
+
+config LEDBRIGHTNESS
+	tristate "LED Brightness Controller"
+	help
+		The Avnet LED Brightness Controller
+
+endif # PL
